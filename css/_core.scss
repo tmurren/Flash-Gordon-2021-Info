@@ -1,0 +1,243 @@
+// ###################################
+// FG2021 - CORE CSS                    
+// ###################################
+
+
+
+// #################### HTML / BODY ####################
+html {
+   -webkit-text-size-adjust: 100%;
+   -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+   color: $grey;
+   padding-top: 50px;
+   font-family: proxima-nova, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   font-size: 16px;
+   line-height: 19px;
+}
+
+
+
+// #################### BOOTSTRAP ####################
+.container-fluid {
+   padding-right: 20px;
+   padding-left: 20px;
+
+   .row {
+      margin-right: -20px;
+      margin-left: -20px;
+      padding-right: 10px;
+      padding-left: 10px;
+
+      .col, .col-1, .col-10, .col-11, .col-12, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-auto, .col-lg, .col-lg-1, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-auto, .col-md, .col-md-1, .col-md-10, .col-md-11, .col-md-12, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-auto, .col-sm, .col-sm-1, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-auto, .col-xl, .col-xl-1, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-auto {
+         padding-right: 10px;
+         padding-left: 10px;
+      
+         .row {
+            margin-right: 0;
+            margin-left: 0;
+         }
+      }
+   }
+}
+
+
+
+// #################### TYPOGRAPHY ####################
+h2 {
+   margin: 0 0 7px 0;
+   font-weight: 700;
+   font-size: 24px;
+   line-height: 27px;
+}
+
+h3 {
+   margin: 0 0 10px 0;
+   font-style: italic;
+   font-weight: 700;
+   font-size: 20px;
+   line-height: 23px;
+}
+
+p {
+   margin: 0 0 10px 0;
+}
+
+a {
+   // color: $blue !important;
+   text-decoration: underline;
+}
+
+
+
+// #################### UL ####################
+ul {
+   margin-bottom: 20px;
+   padding-left: 20px;
+
+   li {
+      margin-bottom: 10px;
+   }
+
+   &.unlisted {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      & > li {
+         margin: 0;
+         padding: 0;
+         position: static;
+
+         &:before {
+            display: none;
+         }
+
+         & > ul {
+            margin: 0;
+            padding: 0;
+         }
+      }
+   }
+
+   &.inline > li {
+      display: inline-block;
+      vertical-align: top;
+   }
+}
+
+
+
+// #################### HEADER ####################
+header {
+   width: 100%;
+   height: 50px;
+   background-color: $red-plastic;
+   padding-top: 15px;
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 1000;
+
+   h1 {
+      color: white;
+      margin: 0;
+      display: inline-block;
+      vertical-align: middle;
+      float: left;
+      font-size: 16px;
+      line-height: 19px;
+      text-transform: uppercase;
+   }
+
+   ul.unlisted {
+      display: inline-block;
+      vertical-align: middle;
+      float: right;
+
+      li {
+         margin-left: 10px;
+
+         a {
+            color: white !important;
+            display: block;
+            text-decoration: none;
+         }
+
+         &:first-child {
+            margin-left: 0;
+         }
+      }
+   }
+}
+
+
+
+// #################### HERO ####################
+#hero {
+   width: 100%;
+   height: 50vh;
+   min-height: 300px;
+   background: black url('../img/ming.jpg') no-repeat center center;
+   background-size: cover;
+   position: relative;
+
+   &:before {
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.5);
+      background: linear-gradient(0deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.25) 100%);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      content: '';
+   }
+   
+   h2 {
+      width: 100%;
+      color: white;
+      margin: 0;
+      padding: 0 20px;
+      text-align: center;
+      position: absolute;
+      bottom: 40px;
+      left: 50%;
+      z-index: 2;
+      @include transform(translateX(-50%));
+      font-weight: 700;
+      font-size: 28px;
+      line-height: 31px;
+   }
+}
+
+
+
+// #################### SECTION HEADING ####################
+#rules h2,
+#about h2 {
+   width: 100%;
+   padding-bottom: 14px;
+   margin-bottom: 25px;
+   text-align: center;
+   position: relative;
+   text-transform: uppercase;
+
+   &:after {
+      width: 100%;
+      height: 1px;
+      background-color: $grey;
+      opacity: 0.5;
+      display: block;
+      position: absolute;
+      bottom: -1px;
+      left: 0;
+      content: '';
+   }
+}
+
+
+
+// #################### RULES ####################
+#rules {
+   background-color: $grey-light;
+   padding-top: 15px;
+   padding-bottom: 30px;
+}
+
+
+
+// #################### ABOUT ####################
+#about {
+   padding-top: 15px;
+   padding-bottom: 30px;
+}
+
+
+
