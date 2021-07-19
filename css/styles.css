@@ -137,7 +137,7 @@ header {
     line-height: 31px; }
 
 #rules h2,
-#about h2 {
+#info h2 {
   width: 100%;
   padding-bottom: 14px;
   margin-bottom: 25px;
@@ -145,7 +145,7 @@ header {
   position: relative;
   text-transform: uppercase; }
   #rules h2:after,
-  #about h2:after {
+  #info h2:after {
     width: 100%;
     height: 1px;
     background-color: #333333;
@@ -161,7 +161,7 @@ header {
   padding-top: 15px;
   padding-bottom: 30px; }
 
-#about {
+#info {
   padding-top: 15px;
   padding-bottom: 30px; }
 
