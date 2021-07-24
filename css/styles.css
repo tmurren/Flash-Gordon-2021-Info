@@ -164,5 +164,7 @@ header {
 #info {
   padding-top: 15px;
   padding-bottom: 30px; }
+  #info img {
+    width: 100%; }
 
 /*# sourceMappingURL=styles.css.map */
