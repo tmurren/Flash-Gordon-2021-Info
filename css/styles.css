@@ -165,6 +165,9 @@ header {
   padding-top: 15px;
   padding-bottom: 30px; }
   #info img {
-    width: 100%; }
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    display: block; }
 
 /*# sourceMappingURL=styles.css.map */
